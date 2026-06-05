@@ -20,8 +20,9 @@ Projeto_4_Conta_Bancaria/
 │   ├── CRIA_DATASETS.jcl      # Cria os PDS, se ainda nao existirem
 │   ├── INSTALA_FONTES_HERC01.jcl # Carrega fontes e dados via card reader
 │   └── CONTABAN.jcl           # Compila, linka, ordena e executa
-└── RELATORIO/
-    └── P4RELAT_EXEMPLO.txt    # Exemplo do relatorio 
+├──  RELATORIO/
+│    └── P4RELAT_EXEMPLO.txt    # Exemplo do relatorio
+└── Prints      #imagens dos prints da compilação
 ```
 
 ## Logica do programa
