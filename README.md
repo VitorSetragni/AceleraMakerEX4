@@ -97,7 +97,7 @@ Se os datasets ja existirem, nao rode esse JCL de novo.
 
 ### 2. Carregar fontes e dados pelo Mac
 
-Com o TK5 ligado, no Terminal do Mac, entre na pasta do projeto e rode:
+Com o TK5 ligado, no Terminal do Mac, entre na pasta do projeto em outro terminal e rode:
 
 ```bash
 nc -w 3 localhost 3505 < JCL/INSTALA_FONTES_HERC01.jcl
