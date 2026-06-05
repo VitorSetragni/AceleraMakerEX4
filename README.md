@@ -1,4 +1,4 @@
-#aceleraMakerEX4
+# aceleraMakerEX4
 # Projeto 4 - Conta Bancaria em COBOL
 
 Projeto desenvolvido em COBOL para ambiente Mainframe TK5/MVS 3.8j. O objetivo e processar dois arquivos de contas bancarias, ordenar os registros por agencia com o utilitario SORT, executar um programa COBOL e gerar um relatorio final com as contas validas, contas invalidas e resumo geral.
