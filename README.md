@@ -11,7 +11,6 @@ O projeto foi separado em arquivos de codigo, dados, copybook e JCL para ficar p
 Projeto_4_Conta_Bancaria/
 ├── COBOL/
 │   ├── CONTABAN.cbl           # Programa principal usado no TK5
-│   └── CONTABAN_COM_COPY.cbl  # Versao alternativa usando COPY REGCONTA
 ├── COPY/
 │   └── REGCONTA.cpy           # Layout do registro de conta
 ├── DATA/
