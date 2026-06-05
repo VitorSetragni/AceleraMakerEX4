@@ -103,7 +103,7 @@ Com o TK5 ligado, no Terminal do Mac, entre na pasta do projeto e rode:
 nc -w 3 localhost 3505 < JCL/INSTALA_FONTES_HERC01.jcl
 ```
 
-Esse job carrega os membros:
+isso ira carrega os membros:
 
 ```text
 HERC01.P4COBOL(CONTABAN)
@@ -112,7 +112,7 @@ HERC01.P4DADOS(CONTAS)
 HERC01.P4DADOS(NOVAS)
 ```
 
-O arquivo `INSTALA_FONTES_HERC01.jcl` esta com `USER=HERC01` e `PASSWORD=HERC01`. Se a senha do seu TSO for diferente, altere essa linha antes de enviar.
+O arquivo `INSTALA_FONTES_HERC01.jcl` esta com `USER=HERC01` e `PASSWORD=HERC01`. 
 
 ### 3. Salvar o JCL principal no TSO
 
@@ -120,12 +120,6 @@ O conteudo de `JCL/CONTABAN.jcl` deve ficar no membro:
 
 ```text
 HERC01.P4JCL(CONTABAN)
-```
-
-No ISPF, abra o membro pelo EDIT e submeta com:
-
-```text
-SUB
 ```
 
 ### 4. Verificar o resultado
@@ -138,29 +132,15 @@ Depois que o job terminar, abra em BROWSE:
 
 Esse dataset e criado automaticamente pelo passo `RUNCOB`. Nao precisa criar o `P4RELAT` manualmente.
 
-## Passos do JCL principal
-
-| Step | Programa | Funcao |
-|---|---|---|
-| LIMPA | IEFBR14 | Remove o relatorio anterior, se existir |
-| COB | IKFCBL00 | Compila o programa COBOL |
-| LKED | IEWL | Linka e gera o load module |
-| SORTSTEP | SORT | Ordena as contas pela agencia |
-| RUNCOB | CONTABAN | Executa o programa e gera o relatorio |
 
 ## Observacao sobre a copybook
 
 O arquivo `COPY/REGCONTA.cpy` contem o layout oficial do registro de conta. Para facilitar a compilacao no TK5 usado durante os testes, o programa principal `CONTABAN.cbl` tambem declara o layout diretamente no `FILE SECTION`.
 
-Tambem foi deixada a versao `COBOL/CONTABAN_COM_COPY.cbl`, que mostra como ficaria o uso do `COPY REGCONTA` caso o ambiente aceite a expansao da copybook sem erro.
 
 ## Evidencias esperadas
 
-Para tirar print da execucao, use estas telas:
-
-1. Tela do TSO/ISPF mostrando `JOB CONTABAN(JOBxxxxx) SUBMITTED`.
-2. Output do job mostrando os steps `COB`, `LKED`, `SORTSTEP` e `RUNCOB`.
-3. Browse do dataset `HERC01.P4RELAT` com o relatorio final.
+Estão na pasta Prints
 
 ## Autor
 
